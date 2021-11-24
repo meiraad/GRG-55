@@ -1,0 +1,11 @@
+{
+  "Comment": "This step function will invoke a lambda function which copies a file from one s3 bucket to another.",
+  "StartAt": "UploadFile",
+  "States": {
+    "UploadFile": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:eu-west-2:059308602976:function:copy_s3_file",
+      "End": true
+    }
+  }
+}
